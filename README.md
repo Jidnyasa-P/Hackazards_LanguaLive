@@ -26,7 +26,7 @@ It serves travelers, businesses, students, and anyone who needs quick multilingu
 ### Team Members (Solo Hacker):  
 - Jidnyasa Patil (Frontend, Firebase Integration)
 
-### Your Approach:  
+### My Approach:  
 - Chose this problem because real-time communication is crucial in a globalized world.
 
 - Challenges faced: Managing real-time translations, authentication, syncing data.
