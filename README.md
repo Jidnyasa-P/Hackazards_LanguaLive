@@ -22,8 +22,6 @@ It serves travelers, businesses, students, and anyone who needs quick multilingu
 
 ## 🧠 Team & Approach
 
-### Team Name:  
-`Your team name here`
 
 ### Team Members (Solo Hacker):  
 - Jidnyasa Patil (Frontend, Firebase Integration)
