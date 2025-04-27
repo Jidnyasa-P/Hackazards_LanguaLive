@@ -1,15 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
   console.log("LanguaLive Auth JS Loaded ✅");
 
-  // --- Firebase Initialization ---
+  // --- Firebase Initialization --- 
+  // Make sure to replace the following with your actual Firebase project configuration
   const firebaseConfig = {
-    apiKey: "AIzaSyBHMhGwsAKSK3iL4wlYLaI7iMMjWqBihVM",
-    authDomain: "langualive-61c8f.firebaseapp.com",
-    projectId: "langualive-61c8f",
-    storageBucket: "langualive-61c8f.firebasestorage.app",
-    messagingSenderId: "1074283555187",
-    appId: "1:1074283555187:web:deea3d7c168477a8d3bd06",
-    measurementId: "G-69772K6PLC",
+    apiKey: "YOUR_API_KEY",
+    authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+    projectId: "YOUR_PROJECT_ID",
+    storageBucket: "YOUR_PROJECT_ID.appspot.com",
+    messagingSenderId: "YOUR_SENDER_ID",
+    appId: "YOUR_APP_ID",
   };
 
   if (!firebase.apps.length) {

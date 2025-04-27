@@ -127,7 +127,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
     // 📦 Groq API Call
     async function callGroqAPI(inputText, fromLang, toLang) {
-      const GROQ_API_KEY = "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"; // 🛑 Replace with your real key!
+      const GROQ_API_KEY = "YOUR_GROQ_API_KEY"; // 🛑 Replace with your real key!
   
       try {
         const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
