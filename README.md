@@ -51,8 +51,8 @@ Sponsor Technologies Used:
 ✅ Works on both web and mobile 
 
 📽️ Demo & Deliverables
-Demo Video: [Paste your YouTube or Loom link here]
-Pitch Deck: [Paste your Google Slides or PDF link here]
+Demo Video: [LanguaLive Demo Youtube Video](https://youtu.be/qCqB86VJnfQ?si=OnmYp7sQJSWAsAKh)
+Pitch Deck: [LanguaLive Project PPT](https://docs.google.com/presentation/d/1HeC1tQZMgqBbeUoHjbs99jcIDawXU-L_/edit?usp=sharing&ouid=110476789858939284191&rtpof=true&sd=true)
 
 ✅ Tasks & Bonus Checklist
 ✅ I followed 2+ social channels and submitted the form
