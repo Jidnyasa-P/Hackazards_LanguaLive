@@ -89,9 +89,9 @@ git clone https://github.com/Jidnyasa-P/Hackazards_LanguaLive.git
 ```
 ### Environment Setup:
 
-Replace your Groq API Key securely (for local testing)
+- Replace your Groq API Key securely (for local testing)
+- Firebase config must be initialized inside your project
 
-Firebase config must be initialized inside your project
 ---
 
 ## 🧬 Future Scope
