@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LanguaLive - Speak the World</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="icon" href="path_to_your_favicon.ico" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1 class="logo">Langua<span>Live</span></h1>
+        <nav>
+          <button class="btn login" onclick="showLoginForm()">Login</button>
+          <button id="logoutBtn" class="form-btn hidden">Logout</button>
+          <button class="btn signup" onclick="showSignupForm()">Signup</button>
+        </nav>
+      </header>
+
+      <section class="hero">
+        <h2>Break Language Barriers</h2>
+        <p>Translate text or speech instantly with AI-powered LanguaLive.</p>
+        <a href="#" id="startTranslatingBtn" class="start-btn">Start Translating</a>
+      </section>
+      <!-- Auth Form Container -->
+      <div class="auth-container hidden" id="authContainer">
+        <span class="close-btn" id="closeAuth">&times;</span>
+
+        <div class="form-box login-form" id="loginForm">
+          <h3>Login to LanguaLive</h3>
+          <input type="email" placeholder="Email" id="loginEmail" />
+          <input type="password" placeholder="Password" id="loginPassword" />
+          <button class="form-btn" id="loginSubmit">Login</button>
+        </div>
+
+        <div class="form-box signup-form hidden" id="signupForm">
+          <h3>Sign Up for LanguaLive</h3>
+          <input type="text" placeholder="Full Name" id="signupName" />
+          <input type="email" placeholder="Email" id="signupEmail" />
+          <input type="password" placeholder="Password" id="signupPassword" />
+          <button class="form-btn" id="signupSubmit">Sign Up</button>
+        </div>
+      </div>
+      <!-- End of Auth Form Container -->
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const startBtn = document.getElementById("startTranslatingBtn");
+        const authContainer = document.getElementById("authContainer"); // Auth form
+        const loginForm = document.getElementById("loginForm"); // Login form
+        const signupForm = document.getElementById("signupForm"); // Signup form
+    
+        startBtn.addEventListener("click", (e) => {
+          e.preventDefault();
+    
+          const user = firebase.auth().currentUser;
+    
+          if (user) {
+            // ✅ User is logged in
+            window.location.href = "dashboard.html";
+          } else {
+            // ❌ Not logged in
+            showLoginPopup();
+          }
+        });
+    
+        function showLoginPopup() {
+          console.log("User not logged in, showing login form...");
+    
+          authContainer.classList.remove("hidden");  // Show auth container
+          loginForm.classList.remove("hidden");       // Show login
+          signupForm.classList.add("hidden");          // Hide signup (default to login)
+    
+          // Optional: Add slight animation for pop-up effect
+          authContainer.style.opacity = 0;
+          setTimeout(() => {
+            authContainer.style.opacity = 1;
+            authContainer.style.transition = "opacity 0.5s ease-in-out";
+          }, 50);
+        }
+      });
+    </script>
+    
+    
+    <!-- Firebase + Auth -->
+    <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-firestore-compat.js"></script>
+    <script src="js/auth.js"></script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Profile | LanguaLive</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/profile.css">
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+  <!-- Your Firebase Initialization -->
+  <script src="js/auth.js"></script>
+</head>
+<body>
+
+  <div class="profile-container">
+    <header>
+      <h1>👤 Profile</h1>
+      <<nav>
+        <a href="index.html" class="start-btn">Home</a>
+        <button id="logoutBtn" class="form-btn">Logout</button>
+      </nav>
+    </header>
+
+    <div class="profile-card">
+        <img src="assets/default-profile.png" alt="Profile Picture" id="profilePic" class="profile-pic" />
+      <h2 id="userName">Loading...</h2>
+      <p id="userEmail">Loading...</p>
+      <p id="translationCount">Loading translations...</p>
+
+      <a href="dashboard.html" class="form-btn">🔙 Back to Dashboard</a>
+    </div>
+  </div>
+
+  <script src="js/profile.js"></script>
+</body>
+</html>

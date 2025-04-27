@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LanguaLive Dashboard</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <link rel="icon" href="path_to_your_favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <div class="dashboard-container">
+    <header>
+      <h1 class="logo">Langua<span>Live</span></h1>
+      <nav>
+        <a href="index.html" class="start-btn">Home</a>
+        <button id="logoutBtn" class="start-btn" style="display: none;">Logout</button>
+        <a href="profile.html" class="start-btn">Profile</a>
+      </nav>
+    </header>
+
+    <section class="translator">
+        <div class="language-select">
+          <select class="start-btn" id="fromLang">
+            <option value="en">🇬🇧 English</option>
+            <option value="hi">🇮🇳 Hindi</option>
+            <option value="es">🇪🇸 Spanish</option>
+            <option value="fr">🇫🇷 French</option>
+            <option value="de">🇩🇪 German</option>
+            <option value="it">🇮🇹 Italian</option>
+            <option value="zh">🇨🇳 Chinese</option>
+            <option value="ja">🇯🇵 Japanese</option>
+            <option value="ko">🇰🇷 Korean</option>
+            <option value="ru">🇷🇺 Russian</option>
+            <option value="ar">🇸🇦 Arabic</option>
+            <option value="pt">🇵🇹 Portuguese</option>
+            <option value="bn">🇧🇩 Bengali</option>
+            <option value="pa">🇵🇰 Punjabi</option>
+            <option value="tr">🇹🇷 Turkish</option>
+            <option value="vi">🇻🇳 Vietnamese</option>
+            <option value="th">🇹🇭 Thai</option>
+            <option value="pl">🇵🇱 Polish</option>
+            <option value="uk">🇺🇦 Ukrainian</option>
+            <option value="ms">🇲🇾 Malay</option>
+          </select>
+      
+          <span class="arrow">→</span>
+      
+          <select class="start-btn" id="toLang">
+            <option value="hi">🇮🇳 Hindi</option>
+            <option value="en">🇬🇧 English</option>
+            <option value="fr">🇫🇷 French</option>
+            <option value="de">🇩🇪 German</option>
+            <option value="it">🇮🇹 Italian</option>
+            <option value="zh">🇨🇳 Chinese</option>
+            <option value="ja">🇯🇵 Japanese</option>
+            <option value="ko">🇰🇷 Korean</option>
+            <option value="ru">🇷🇺 Russian</option>
+            <option value="ar">🇸🇦 Arabic</option>
+            <option value="es">🇪🇸 Spanish</option>
+            <option value="pt">🇵🇹 Portuguese</option>
+            <option value="bn">🇧🇩 Bengali</option>
+            <option value="pa">🇵🇰 Punjabi</option>
+            <option value="tr">🇹🇷 Turkish</option>
+            <option value="vi">🇻🇳 Vietnamese</option>
+            <option value="th">🇹🇭 Thai</option>
+            <option value="pl">🇵🇱 Polish</option>
+            <option value="uk">🇺🇦 Ukrainian</option>
+            <option value="ms">🇲🇾 Malay</option>
+          </select>
+        </div>
+      </section>
+      
+      <textarea id="inputText" placeholder="Type text to translate..."></textarea>
+      <div class="st">
+        <button id="micBtn" class="form-btn">🎤 Speak</button>
+        <button class="form-btn" id="translateBtn">Translate</button>
+      </div>
+      <div id="outputBox">
+        <h3>Translation</h3>
+        <p id="outputText"></p>
+      </div>    
+    </section>
+  </div>
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-firestore-compat.js"></script>
+
+  <!-- Custom Scripts -->
+  <script src="js/auth.js"></script> <!-- Initializes Firebase -->
+  <script src="js/translate.js"></script> <!-- Uses Firebase -->
+</body>
+</html>
